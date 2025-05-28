@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 10rem auto;
+}
+
+.grid--2cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-login {
+  width: 100%;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 20rem;
+  width: 20rem;
+}
+
+.welcome-back {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.heading-primary {
+  font-size: 3.2rem;
+  color: #333;
+  font-weight: 600;
+}
+.details {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12rem;
+  margin-top: 5rem;
+  gap: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+label {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+input:focus {
+  border-bottom: 1px solid #333;
+}
+
+.password-group {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.options a {
+  text-decoration: none;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.options a:hover {
+  color: #333;
+}
+
+.login-button {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 50%;
+  align-self: center;
+}
+
+.login-button:hover {
+  background-color: #333;
+}
+
+.signup-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 7.6rem;
+}
+
+.signup:link,
+.signup:visited {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+}
+
+.signup:hover,
+.signup:active {
+  color: #000;
+}

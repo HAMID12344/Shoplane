@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men's Clothing - ShopLane</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f8f8f8;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        padding: 20px;
+        color: white;
+        text-align: center;
+      }
+      main {
+        padding: 30px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+      .card {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.2s;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .card img {
+        width: 100%;
+        height: 200px; /* Set a fixed height for equal image sizes */
+        object-fit: contain; /* Ensure images are cropped proportionally */
+      }
+      .card h3 {
+        margin: 10px 0;
+        font-size: 1.2rem;
+      }
+      .card p {
+        color: #777;
+      }
+      .card button {
+        padding: 10px 15px;
+        background: #00f2fe;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      .card button:hover {
+        background: #4facfe;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>ShopLane</h1>
+      <p>Stylish and Comfortable Clothing for Men</p>
+    </header>
+    <main>
+      <div class="grid">
+        <div class="card">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0695/9382/5523/files/Alkaram-Menswear.jpg?v=1718025109"
+            alt="Clothing"
+          />
+          <h3>Casual Shirt</h3>
+          <p>49.99 Riyal</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPlAKG_BRNlQ7in31qQ4Za4nis-mvFGIf4Sg&s"
+            alt="Clothing"
+          />
+          <h3>Denim Jeans</h3>
+          <p>59.99 Riyal</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img
+            src="https://img.drz.lazcdn.com/static/pk/p/9f12293fab68e875582993be25ba0bdf.jpg_720x720q80.jpg"
+            alt="Clothing"
+          />
+          <h3>Leather Jacket</h3>
+          <p>99.99 Riyal</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img
+            src="https://cdn.runrepeat.com/storage/gallery/buying_guide_primary/273/273-best-running-shoes-for-men-15748471-main.jpg"
+            alt="Clothing"
+          />
+          <h3>Running Shoes</h3>
+          <p>79.99 Riyal</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

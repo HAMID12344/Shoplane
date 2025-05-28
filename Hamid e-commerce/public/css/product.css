@@ -1,0 +1,144 @@
+.bread-links:link,
+.bread-links:visited {
+  color: #333;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.flex-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 4.2rem;
+}
+
+.current:link,
+.current:visited {
+  font-weight: 700;
+}
+
+.image-container {
+  height: 60rem;
+  margin-bottom: 3.2rem;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.image-container-sm {
+  height: 15rem;
+  max-width: 15rem;
+  background-color: #eee;
+}
+
+.image-container-sm img {
+  width: 100%;
+}
+
+.sm-cont {
+  display: flex;
+  gap: 2rem;
+  max-width: 60rem;
+}
+
+.grid-2cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+  margin-bottom: 4.8rem;
+}
+
+.item-name {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+.item-description {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mtop {
+  margin-top: 2rem;
+}
+
+.item-price {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.payment-desc {
+  font-size: 1.5rem;
+}
+
+.box {
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+}
+
+.green {
+  background-color: green;
+}
+
+.black {
+  background-color: #000;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+
+.color {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.colors {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4.8rem;
+}
+
+.quantity-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 12rem;
+  height: 4rem;
+  border-radius: 2rem;
+  border: none;
+}
+.signs {
+  width: 2rem;
+}
+
+.number {
+  font-size: 1.8rem;
+}
+
+.quantity-section {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.quantity-section p {
+  font-size: 1.2rem;
+}
+
+.str {
+  color: orange;
+}
+.button-section {
+  display: flex;
+  gap: 4rem;
+  margin-top: 4.8rem;
+}
+
+.buy-now {
+  background-color: #333;
+  color: #fff;
+}

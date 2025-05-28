@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Login</title>
+    <link href="css/user-login.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="login-section">
+      <div class="container grid--2cols">
+        <div class="image-container">
+          <img src="/img/edit.svg" class="image-login" />
+        </div>
+
+        <div class="login-container">
+          <div class="logo-box">
+            <a href="/">
+              <img src="img/techstore.png" class="logo" />
+            </a>
+          </div>
+          <div class="welcome-back">
+            <h1 class="heading-primary">Welcome Back!</h1>
+            <p class="details">Please enter your details</p>
+          </div>
+          <div class="login-section>">
+            <form class="login-form" action="/login" method="post">
+              <input
+                style="display: none"
+                type="text"
+                name="fakeusernameremembered"
+              />
+              <input
+                style="display: none"
+                type="password"
+                name="fakepasswordremembered"
+              />
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="input-group password-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+              </div>
+              <h3 style="color: red"><%=errorMessage%></h3>
+
+              <button type="submit" class="login-button">Log In</button>
+            </form>
+          </div>
+          <div class="signup-sec">
+            <p class="details">Dont have an account?</p>
+            <a href="signup" class="signup">Signup</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
