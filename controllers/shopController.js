@@ -1,17 +1,17 @@
+require("dotenv").config();
 const express = require("express");
 const user = require("../models/user");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const product = require("../models/product");
 const { IsLoggedIn } = require("../middleware/isUserAuth");
-const stripe = require("stripe")(
-  "sk_test_51OfKKxIMu6keChZRitqe2ULOiMUg32MGI20c1DK4S2lHyWEMhTPlxrFNIBMl9hSICoMGxfvGmNEvGzutNeR1lNXf00hYcYmIjE"
-);
+if (!process.env.STRIPE_SECRET_KEY) {
+  throw new Error("STRIPE_SECRET_KEY is not set in environment variables.");
+}
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const Order = require("../models/order");
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(
-  "SG.agTqkwgWSxi-xaSUMUxUew.tyMpelxYURtGVVEjtjj5ddaMP44Sm-ZhP2V4NIUH-DY"
-);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function updateBrandForBeats() {
   try {
@@ -517,22 +517,18 @@ exports.postCheckout = async (req, res, next) => {
       price: productId.price + 5.99, // Calculate total price for the item
     };
   });
-  const lineItems = cart.map((product) => ({
-    price_data: {
-      currency: "usd",
-      product_data: {
-        name: product.name,
-        description: product.description,
-        images: product.image,
-      },
-      unit_amount: Math.round(product.price * 100), // Convert to cents
-    },
-    quantity: product.quantity,
-  }));
-
-  console.log("The body", req.body);
-  console.log("lineItems", lineItems);
-
+  // const lineItems = cart.map((product) => ({
+  //   price_data: {
+  //     currency: "usd",
+  //     product_data: {
+  //       name: product.name,
+  //       description: product.description,
+  //       images: product.image,
+  //     },
+  //     unit_amount: Math.round(product.price * 100), // Convert to cents
+  //   },
+  //   quantity: product.quantity,
+  // )
   req.session.cInfo = {
     address: req.body.address,
     totalPrice: req.body.total,
